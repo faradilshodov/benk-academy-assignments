@@ -11,25 +11,54 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
             gap: 10px;
-            }
+            /* Ensure the container fits the viewport */
+            height: 100vh;
+            /* max-width: 100vw; */
+            padding: 10px; /* Adjust padding as needed */
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+        }
 
         .grid-item {
-            width: 100%; 
-            height: 100%; 
-            overflow: hidden; 
+            width: 100%;
+            height: 30%;
+            padding-top: 33.33%; /* Aspect ratio of 1:1 for the items */
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+
+        .grid-item:hover {
+            transition: all 0.2s ease;
+            transform: scale(1.050);
         }
 
         .grid-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100%; 
-            object-fit: cover; 
-            display: block;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .grid-item:hover {
-            transform: scale(1.055);
-            transition: all 0.2s ease;
+        
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(5, 20vw); /* Adjust based on new number of rows */
+            }
         }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(9, 33.33vw);
+            }
+        }
+
+
     </style>
 </head>
 <body>
