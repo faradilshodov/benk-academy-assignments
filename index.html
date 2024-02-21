@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Task</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            }
+
+        .grid-item {
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.055);
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+        <div class="grid-item">
+            <img src="/media/animeScenery.gif">
+        </div>
+    </div>
+</body>
+</html>
